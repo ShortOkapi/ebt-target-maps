@@ -32,7 +32,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>EBT Dot Safari · Target map editor · RC3</title>
+<title>EBT Dot Safari · Target map editor · v1.0.0-rc4</title>
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACJ0lEQVRYhe1XO0sDQRA+0N9wh62N2t9ZqZcoRLy1jaIXc8HCRxNj8IFaCl4ajYUpQtRCBbWUkEr/gDaKj98hlqY5+TZuvMdeTpDLISTwNfPNzszOzkzmBAE/Ve0Wlcm8KJM3SSF1SSFWSKiLsvYqyiQHn9R3w7lWC9EpF6JMqjQI3Lzdzm1B5ASkJKoAJIU8C+43XyocW+XbR6ty99REqfZgxYw1yvfGpi3z8tbBA5CBg048s07P2HnYXDQrzgwo2icCcAjdzhmy+2eUH81scHkAHHSyB+dcHrbd/gS3wM/4SvGC8mPzm7464KADXT+dTgBS0BMc1e65qVsqnFB+WF/1TS846CwXTrk8bAcGEDPWaMHhHRngvC+RonzP4KQ1u1108MDM1gHloNOfSNEzdh421e9OahmA1GYIbgF6Ge2EimYYSuWbt6NZIlOWoacdULVkk4cuzthtwCabEy0DMDlDBkDawcPR+9Wu9XHtBGQsCH2nyLUB239uQ0NPe5wzgAt9DhidAPSQn8D0KUL0eVARjky0LsK93xRhL6cNMeHsbYgggtoQZ7xtOPUPBlE8s+4ZxZjtGK/sdvrOoWcUI+0sSwPjc/SMexTHfzOKS65Npu1/RpXOQnIX8UpWjmAprdsFi6Z3LUfxqAFrOYYM63NUu3uzgs2FPc5aLkb9YSLKJBddAFq28XEqk2oEzm+EZLLr5wtZJjlR0V7wLmE5hW34oDf/dv4F/NSaZLFxf24AAAAASUVORK5CYII=">
+<link rel="icon" type="image/svg+xml" sizes="any" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%2317354b%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%226%22%20width%3D%2210%22%20height%3D%2210%22%20rx%3D%222%22%20fill%3D%22%239bbcd0%22%2F%3E%3Crect%20x%3D%2219%22%20y%3D%226%22%20width%3D%2210%22%20height%3D%2210%22%20rx%3D%222%22%20fill%3D%22%239bbcd0%22%2F%3E%3Crect%20x%3D%2232%22%20y%3D%226%22%20width%3D%2210%22%20height%3D%2210%22%20rx%3D%222%22%20fill%3D%22%239bbcd0%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2219%22%20width%3D%2210%22%20height%3D%2210%22%20rx%3D%222%22%20fill%3D%22%239bbcd0%22%2F%3E%3Crect%20x%3D%2219%22%20y%3D%2219%22%20width%3D%2210%22%20height%3D%2210%22%20rx%3D%222%22%20fill%3D%22%23f1a983%22%2F%3E%3Crect%20x%3D%2232%22%20y%3D%2219%22%20width%3D%2210%22%20height%3D%2210%22%20rx%3D%222%22%20fill%3D%22%239bbcd0%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2232%22%20width%3D%2210%22%20height%3D%2210%22%20rx%3D%222%22%20fill%3D%22%239bbcd0%22%2F%3E%3Crect%20x%3D%2219%22%20y%3D%2232%22%20width%3D%2210%22%20height%3D%2210%22%20rx%3D%222%22%20fill%3D%22%239bbcd0%22%2F%3E%3Crect%20x%3D%2232%22%20y%3D%2232%22%20width%3D%2210%22%20height%3D%2210%22%20rx%3D%222%22%20fill%3D%22%239bbcd0%22%2F%3E%3C%2Fsvg%3E">
 <meta name="color-scheme" content="light">
 <style>/* required styles */
 
@@ -711,6 +713,7 @@ body{display:flex;flex-direction:column;min-height:100dvh}.workspace{height:auto
 #local-author[aria-invalid="true"]{border:2px solid #b42318;background:#fff7f6}
 #editor-name-error{flex-basis:100%;margin:0}
 #help-dialog details h3{margin:16px 0 6px}
+.excluded-swatch{background-image:repeating-linear-gradient(45deg,transparent 0,transparent 5px,#30343b 5px,#30343b 6px),repeating-linear-gradient(135deg,transparent 0,transparent 5px,#30343b 5px,#30343b 6px)!important}
 </style>
 </head>
 <body>
@@ -778,7 +781,8 @@ body{display:flex;flex-direction:column;min-height:100dvh}.workspace{height:auto
   <p>Exported filenames include the map revision, editor name and download time. Filename times use <strong>UTC (UTC+00:00)</strong>, in <strong>YYYYMMDD-HHmm</strong> format, without seconds or a timezone suffix. Unicode letters, spaces and emojis are kept. Characters that cannot be used in filenames are replaced with underscores; exceptionally long names are shortened in filenames only. Names inside the map and report are kept unchanged.</p>
   <p>The Starting map time is shown in UTC. If the source records only a date, only that date is shown. History times in the report are shown in Lisbon local time.</p>
   <h3>Map display</h3>
-  <p>Orange dots can be Euro-use targets. The other classifications are excluded. Map imagery needs internet access; the grid, editing and exports still work without it. Colour opacity is adjustable, and sea dots have blue hatching. Repeated copies of the world share the same saved dots.</p>
+  <p>Orange dots can be Euro-use targets. Unconquerable Euro land is dark grey with crossed hatching; Sea has blue diagonal stripes; Foreign land is red. Unreviewed dots have no classification colour or pattern. All classifications except Conquerable are excluded from Euro-use targets.</p>
+  <p>The opacity slider fades the classification colours. Crossed lines keep a minimum visibility while the overlay is on, so Unconquerable dots remain recognisable over the map. At 0%, all classification colours and patterns are hidden. Map imagery needs internet access; the grid, editing and exports still work without it. Repeated copies of the world share the same saved dots.</p>
   <h3>Preparing data for Dot Safari</h3>
   <p>Editing or saving files here does not update the public Dot Safari app. The smaller eligibility file below is for preparing a future app update. It omits comments and history; use <strong>Save Map File</strong> to keep the complete working map.</p>
   <button id="export-ranges">Save eligibility data</button>
@@ -798,7 +802,7 @@ body{display:flex;flex-direction:column;min-height:100dvh}.workspace{height:auto
   const GRID = Object.freeze({id:'ebt-dot-safari-legacy-v1',dotH:0.28,dotW:66/157,minLat:-89.72,minLon:-(178+140/157),longitudeWrap:360,minColumn:-3,maxColumn:853,minRow:0,maxRow:641});
   const CLASSES = Object.freeze({
     eligible:{label:'Conquerable Euro land',color:'#F1A983'},
-    excluded:{label:'Unconquerable Euro land',color:'#D0D0D0'},
+    excluded:{label:'Unconquerable Euro land',color:'#737373'},
     sea:{label:'Sea',color:'#AAD3DF'},
     foreign:{label:'Foreign land',color:'#FF0000'},
     unreviewed:{label:'Unreviewed',color:'#FFFFFF'}
@@ -985,6 +989,30 @@ for(const sourceLayer of [osm,esri]){
 
 function rebuildRows(){rows=new Map();for(const c of editor.cells.values()){if(!rows.has(c.i))rows.set(c.i,[]);rows.get(c.i).push(c);}}
 rebuildRows();
+
+// Crossed lines retain contrast at low opacity; zero still hides the overlay.
+function drawExcludedHatch(ctx,r,size,opacity){
+  if(opacity<=0)return;
+  const left=Math.max(0,r[0]),top=Math.max(0,r[1]);
+  const right=Math.min(size.x,r[0]+r[2]),bottom=Math.min(size.y,r[1]+r[3]);
+  if(right<=left||bottom<=top)return;
+  ctx.save();ctx.beginPath();ctx.rect(...r);ctx.clip();
+  ctx.globalAlpha=Math.min(.9,.5+opacity*.4);
+  ctx.beginPath();
+  // Sixteen pixels divides the map tile size, keeping the mesh aligned.
+  for(let k=Math.floor((left+top)/16)*16;k<=right+bottom;k+=16){
+    ctx.moveTo(k-top,top);ctx.lineTo(k-bottom,bottom);
+  }
+  for(let k=Math.floor((left-bottom)/16)*16;k<=right-top;k+=16){
+    ctx.moveTo(k+top,top);ctx.lineTo(k+bottom,bottom);
+  }
+  if(r[2]>=2&&r[3]>=2)ctx.rect(r[0]+.5,r[1]+.5,r[2]-1,r[3]-1);
+  // A light edge keeps the dark lines visible over satellite imagery too.
+  ctx.strokeStyle='rgba(255,255,255,.65)';ctx.lineWidth=3;ctx.stroke();
+  ctx.strokeStyle='#30343b';ctx.lineWidth=1;ctx.stroke();
+  ctx.restore();
+}
+
 // Intentionally keeps the v2.0.4 wrapped GridLayer geometry and anchors.
 const TargetLayer=L.GridLayer.extend({createTile(coords){
   const canvas=document.createElement('canvas'), size=this.getTileSize(), dpr=Math.min(devicePixelRatio||1,2);
@@ -997,6 +1025,7 @@ const TargetLayer=L.GridLayer.extend({createTile(coords){
   for(let i=i0;i<=i1;i++)for(const c of rows.get(i)||[]){
     if(c.j<j0||c.j>j1||c.classification==='unreviewed'||overlayOpacity===0)continue;
     const r=rect(i,c.j);ctx.fillStyle=C.CLASSES[c.classification].color;ctx.globalAlpha=overlayOpacity;ctx.fillRect(...r);ctx.globalAlpha=1;
+    if(c.classification==='excluded')drawExcludedHatch(ctx,r,size,overlayOpacity);
     if(c.classification==='sea'){
       ctx.save();ctx.beginPath();ctx.rect(...r);ctx.clip();ctx.globalAlpha=Math.min(.85,overlayOpacity*1.8);ctx.strokeStyle='#28629C';ctx.lineWidth=1;
       for(let x=Math.floor((r[0]-r[3])/9)*9;x<r[0]+r[2];x+=9){ctx.beginPath();ctx.moveTo(x,r[1]+r[3]);ctx.lineTo(x+r[3],r[1]);ctx.stroke();}
@@ -1073,7 +1102,7 @@ function populateSources(){
   add($('dataset-info'),'p','Leaflet 1.9.4 © Vladimir Agafonkin and contributors (BSD-2-Clause). Editor code: MIT. Curated data provenance is retained in the JSON.');
 }
 
-const REPORT_CSS="\n*{box-sizing:border-box}body{font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif;color:#20394b;background:#f2f5f7;margin:0}main{max-width:1020px;margin:32px auto;padding:32px;background:white;border:1px solid #d5dfe5;border-radius:12px}h1{line-height:1.2;margin:10px 0}h2{font-size:21px;margin-top:30px}h3{font-size:17px}a{color:#076790;overflow-wrap:anywhere}nav{display:flex;gap:20px;flex-wrap:wrap;margin:20px 0}.meta{color:#526772;font-size:14px}.eyebrow{color:#536b7a;letter-spacing:.12em;font-size:12px}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #dae3e8;vertical-align:top}th{background:#edf3f6}.scroll{overflow-x:auto}article{margin:24px 0;border-left:3px solid #d2dfe7;padding-left:18px;break-inside:avoid}.comment{white-space:pre-wrap;overflow-wrap:anywhere}.swatch{display:inline-block;width:13px;height:13px;margin-right:7px;border:1px solid #70828d;vertical-align:baseline}.callout{background:#edf4f6;padding:14px 18px;border-radius:6px}footer{border-top:1px solid #d5dfe5;margin-top:32px;padding-top:15px}.print{border:1px solid #bfd0dc;background:#17354b;color:white;border-radius:5px;padding:9px 14px;cursor:pointer;font:inherit}@media(max-width:600px){main{margin:0;padding:18px;border:0;border-radius:0}th,td{padding:9px 6px}}@media print{body{background:white;font-size:11pt}main{margin:0;max-width:none;padding:0;border:0}nav,.print{display:none}a{color:inherit;text-decoration:none}thead{display:table-header-group}@page{size:A4;margin:18mm}}\n\n.sortable th{padding:0}.sort-button{width:100%;border:0;background:transparent;color:inherit;font:inherit;font-weight:650;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;padding:12px 10px;min-height:44px}.sort-button:hover{background:#dce9f0}.sort-button:focus-visible{outline:3px solid #087baa;outline-offset:-3px}.sort-mark{font-size:12px;color:#526f83;flex-shrink:0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:600px){.sort-button{padding:9px 6px;gap:6px}}@media print{.sort-mark,.sort-help{display:none}.sort-button{padding:9px 6px;color:inherit}.sort-button:hover{background:transparent}}\n";
+const REPORT_CSS="\n*{box-sizing:border-box}body{font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif;color:#20394b;background:#f2f5f7;margin:0}main{max-width:1020px;margin:32px auto;padding:32px;background:white;border:1px solid #d5dfe5;border-radius:12px}h1{line-height:1.2;margin:10px 0}h2{font-size:21px;margin-top:30px}h3{font-size:17px}a{color:#076790;overflow-wrap:anywhere}nav{display:flex;gap:20px;flex-wrap:wrap;margin:20px 0}.meta{color:#526772;font-size:14px}.eyebrow{color:#536b7a;letter-spacing:.12em;font-size:12px}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #dae3e8;vertical-align:top}th{background:#edf3f6}.scroll{overflow-x:auto}article{margin:24px 0;border-left:3px solid #d2dfe7;padding-left:18px;break-inside:avoid}.comment{white-space:pre-wrap;overflow-wrap:anywhere}.swatch{display:inline-block;width:13px;height:13px;margin-right:7px;border:1px solid #70828d;vertical-align:baseline}.excluded-swatch{background-image:repeating-linear-gradient(45deg,transparent 0,transparent 5px,#30343b 5px,#30343b 6px),repeating-linear-gradient(135deg,transparent 0,transparent 5px,#30343b 5px,#30343b 6px)!important}.callout{background:#edf4f6;padding:14px 18px;border-radius:6px}footer{border-top:1px solid #d5dfe5;margin-top:32px;padding-top:15px}.print{border:1px solid #bfd0dc;background:#17354b;color:white;border-radius:5px;padding:9px 14px;cursor:pointer;font:inherit}@media(max-width:600px){main{margin:0;padding:18px;border:0;border-radius:0}th,td{padding:9px 6px}}@media print{body{background:white;font-size:11pt}main{margin:0;max-width:none;padding:0;border:0}nav,.print{display:none}a{color:inherit;text-decoration:none}thead{display:table-header-group}@page{size:A4;margin:18mm}}\n\n.sortable th{padding:0}.sort-button{width:100%;border:0;background:transparent;color:inherit;font:inherit;font-weight:650;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;padding:12px 10px;min-height:44px}.sort-button:hover{background:#dce9f0}.sort-button:focus-visible{outline:3px solid #087baa;outline-offset:-3px}.sort-mark{font-size:12px;color:#526f83;flex-shrink:0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:600px){.sort-button{padding:9px 6px;gap:6px}}@media print{.sort-mark,.sort-help{display:none}.sort-button{padding:9px 6px;color:inherit}.sort-button:hover{background:transparent}}\n";
 const REPORT_SCRIPT="\n(function(){\n 'use strict';\n const collator=new Intl.Collator('en',{numeric:true,sensitivity:'base'});\n for(const table of document.querySelectorAll('table.sortable')){\n  const headers=[...table.tHead.rows[0].cells],body=table.tBodies[0];\n  let active=-1,direction=1;\n  function value(row,column){\n   const cell=row.cells[column],text=cell.dataset.sort||cell.textContent.trim();\n   switch(headers[column].dataset.type){\n    case 'dot':return text.split(',').map(Number);\n    case 'date':return Date.parse(text);\n    default:return text;\n   }\n  }\n  function sort(column,nextDirection,announce=true){\n   active=column;direction=nextDirection;\n   const rows=[...body.rows],kind=headers[column].dataset.type;\n   rows.sort((a,b)=>{\n    const left=value(a,column),right=value(b,column);\n    const result=kind==='dot'?(left[0]-right[0]||left[1]-right[1]):kind==='date'?left-right:collator.compare(left,right);\n    return result?direction*result:Number(a.dataset.order)-Number(b.dataset.order);\n   });\n   body.append(...rows);\n   headers.forEach((header,index)=>{\n    const button=header.querySelector('button'),label=header.querySelector('.sort-label').textContent;\n    if(index===active)header.setAttribute('aria-sort',direction===1?'ascending':'descending');else header.removeAttribute('aria-sort');\n    header.querySelector('.sort-mark').textContent=index===active?(direction===1?'▲':'▼'):'↕';\n    const next=index===active&&direction===1?'descending':'ascending';\n    button.setAttribute('aria-label',`Sort by ${label}, ${next}`);\n    button.title=`Sort by ${label}; click again to reverse`;\n   });\n   if(announce)document.getElementById('sort-status').textContent=`${table.getAttribute('aria-label')} sorted by ${headers[column].querySelector('.sort-label').textContent}, ${direction===1?'ascending':'descending'}.`;\n  }\n  headers.forEach((header,column)=>header.querySelector('button').addEventListener('click',()=>sort(column,active===column?-direction:1)));\n  if(table.id==='summary-table')sort(1,1,false);else sort(0,-1,false);\n }\n})();\n";
 function escapeHTML(value){
   return String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[ch]);
@@ -1107,7 +1136,7 @@ function buildReport(data){
     return h.action==='edit'?decision:`${h.action==='undo'?'Undo':'Redo'}: ${decision}`;
   };
   const heading=(label,type)=>`<th scope="col" data-type="${type}"><button class="sort-button" type="button"><span class="sort-label">${label}</span><span class="sort-mark" aria-hidden="true">↕</span></button></th>`;
-  const decisionsHTML=decisions.map((d,index)=>`<tr data-order="${index}"><td data-sort="${d.dot.join(',')}">[${d.dot.join(', ')}]</td><td>${C.CLASSES[d.from].label}</td><td><span class="swatch" style="background:${C.CLASSES[d.to].color}"></span>${C.CLASSES[d.to].label}</td></tr>`).join('');
+  const decisionsHTML=decisions.map((d,index)=>`<tr data-order="${index}"><td data-sort="${d.dot.join(',')}">[${d.dot.join(', ')}]</td><td>${C.CLASSES[d.from].label}</td><td><span class="swatch${d.to==='excluded'?' excluded-swatch':''}" style="background:${C.CLASSES[d.to].color}"></span>${C.CLASSES[d.to].label}</td></tr>`).join('');
   const summaryHTML=history.map((h,index)=>`<tr data-order="${index}"><td data-sort="${h.dot.join(',')}"><a href="#entry-${index+1}">[${h.dot.join(', ')}]</a></td><td data-sort="${escapeHTML(h.at)}">${escapeHTML(when(h))}</td><td>${escapeHTML(authorLabel(h))}</td><td>${escapeHTML(description(h))}</td></tr>`).join('');
   const commentsHTML=history.map((h,index)=>`<article id="entry-${index+1}"><h3>${index+1}. [${h.dot.join(', ')}] — ${escapeHTML(description(h))}</h3><p class="meta">${escapeHTML(when(h))} · ${escapeHTML(authorLabel(h))}</p><div class="comment">${linkedComment(h.comment)}</div></article>`).join('');
   return `<!doctype html><html lang="en">
@@ -1272,6 +1301,7 @@ for(const [value,meta] of Object.entries(C.CLASSES)){
   sw.style.background=meta.color;
   add(label,'span',({eligible:'Conquerable',excluded:'Unconquerable',foreign:'Foreign',sea:'Sea',unreviewed:'Unreviewed'})[value]);
   if(value==='sea')sw.classList.add('sea-swatch');
+  if(value==='excluded')sw.classList.add('excluded-swatch');
 }
 $('reason').addEventListener('input',()=>{refreshSave();persist();});
 $('classification').addEventListener('change',()=>{refreshSave();persist();});
