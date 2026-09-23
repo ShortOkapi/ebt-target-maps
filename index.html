@@ -963,15 +963,15 @@ body{display:flex;flex-direction:column;min-height:100dvh}.workspace{height:auto
 })(typeof globalThis!=='undefined'?globalThis:this);
 </script>
 <script>/* Standalone editor. Leaflet and dataset operations are bundled in this file. */
-(function(){
+(async function(){
 'use strict';
-const APP_VERSION='1.0.0';
+const APP_VERSION='1.1.0-rc1';
 const C=TargetCore, G=C.GRID, $=id=>document.getElementById(id);
 document.title=`EBT Dot Safari · Target map editor · v${APP_VERSION}`;
 $('draft-status').textContent=`Standalone editor · v${APP_VERSION}`;
 let initial = null;
 try {
-  const response = await fetch('master-map.json');
+  const response = await fetch('[https://raw.githubusercontent.com/ShortOkapi/ebt-target-maps/v1.1.0/master-map.json](https://raw.githubusercontent.com/ShortOkapi/ebt-target-maps/v1.1.0/master-map.json)');
   if (!response.ok) throw new Error('Could not load master-map.json');
   initial = await response.json();
 } catch (error) {
