@@ -965,7 +965,7 @@ body{display:flex;flex-direction:column;min-height:100dvh}.workspace{height:auto
 <script>/* Standalone editor. Leaflet and dataset operations are bundled in this file. */
 (async function(){
 'use strict';
-const APP_VERSION='1.1.0-rc3';
+const APP_VERSION='1.1.0-rc4';
 const C=TargetCore, G=C.GRID, $=id=>document.getElementById(id);
 document.title=`EBT Dot Safari · Target map editor · v${APP_VERSION}`;
 $('draft-status').textContent=`Standalone editor · v${APP_VERSION}`;
@@ -1485,7 +1485,7 @@ $('publish-map').onclick = async () => {
         })
       });
 
-      if (!putRes.ok) throw new Error('GitHub refused the upload. Please check your token permissions.');
+      if (!putRes.ok) throw new Error('Upload refused. Your GitHub token has likely expired. Time to generate a new token in GitHub Settings and update your saved copy!');
 
       // 4. Trigger the local backup download
       download(data, exportFilename('euro-use-targets', 'json'));
