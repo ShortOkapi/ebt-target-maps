@@ -1,0 +1,25 @@
+name: Generate Compact Map
+
+on:
+  push:
+    paths:
+      - 'master-map.json'
+
+jobs:
+  compact:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run compaction script
+        run: node compact.js
+
+      - name: Commit and push the compact file
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-generate compact eligibility map"
+          file_pattern: "euro-use-eligibility.json"
