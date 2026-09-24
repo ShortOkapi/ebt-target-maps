@@ -932,7 +932,7 @@ body{display:flex;flex-direction:column;min-height:100dvh}.workspace{height:auto
 <script>/* Standalone editor. Leaflet and dataset operations are bundled in this file. */
 (async function(){
 'use strict';
-const APP_VERSION='1.1.0-rc7';
+const APP_VERSION='1.1.0-rc8';
 const C=TargetCore, G=C.GRID, $=id=>document.getElementById(id);
 document.title=`EBT Dot Safari · Target map editor · v${APP_VERSION}`;
 $('draft-status').textContent=`Standalone editor · v${APP_VERSION}`;
@@ -1426,7 +1426,7 @@ $('publish-map').onclick = async () => {
 
     // 1. Find the exact file currently on GitHub so we can safely overwrite it
     let sha = '';
-    const getRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}?ref=main`);
+    const getRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}?ref=v1.1.0`);
     if (getRes.ok) sha = (await getRes.json()).sha;
 
     // 2. Prepare the new data securely
