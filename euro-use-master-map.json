@@ -14,9 +14,9 @@
     "maxRow": 641
   },
   "datasetId": "euro-use-curated-2026-09-17",
-  "revision": 6,
+  "revision": 7,
   "createdAt": "2026-09-17",
-  "updatedAt": "2026-09-21T23:49:54.862Z",
+  "updatedAt": "2026-09-25T00:48:45.195Z",
   "model": {
     "id": "euro-use",
     "name": "Euro-use area",
@@ -18297,7 +18297,7 @@
     {
       "i": 447,
       "j": 418,
-      "classification": "sea",
+      "classification": "foreign",
       "provenance": [
         {
           "sourceId": "workbook-11",
@@ -72232,6 +72232,23 @@
       "from": "unreviewed",
       "to": "sea",
       "comment": "No comment. :)",
+      "action": "edit",
+      "actor": {
+        "id": "local",
+        "name": "lmviterbo",
+        "authentication": "local"
+      }
+    },
+    {
+      "id": "r7-1790297325195-4khi8vs",
+      "dot": [
+        447,
+        418
+      ],
+      "at": "2026-09-25T00:48:45.195Z",
+      "from": "sea",
+      "to": "foreign",
+      "comment": "Land here, near the dot's southern limit: narrow rock tongue off Three Forks Beach",
       "action": "edit",
       "actor": {
         "id": "local",
