@@ -3,7 +3,7 @@ name: Generate Compact Map
 on:
   push:
     paths:
-      - 'master-map.json'
+      - 'euro-use-map.json'
 
 jobs:
   compact:

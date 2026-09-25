@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // 1. Read the newly published master map
-const data = JSON.parse(fs.readFileSync('master-map.json', 'utf8'));
+const data = JSON.parse(fs.readFileSync('euro-use-map.json', 'utf8'));
 
 // 2. Filter and sort only the eligible cells
 const eligible = data.cells.filter(c => c.classification === 'eligible');
