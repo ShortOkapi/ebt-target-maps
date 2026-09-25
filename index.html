@@ -932,17 +932,17 @@ body{display:flex;flex-direction:column;min-height:100dvh}.workspace{height:auto
 <script>/* Standalone editor. Leaflet and dataset operations are bundled in this file. */
 (async function(){
 'use strict';
-const APP_VERSION='1.1.0-rc10';
+const APP_VERSION='1.1.0-rc11';
 const C=TargetCore, G=C.GRID, $=id=>document.getElementById(id);
 document.title=`EBT Dot Safari · Target map editor · v${APP_VERSION}`;
 $('draft-status').textContent=`Standalone editor · v${APP_VERSION}`;
 let initial = null;
 try {
-  const response = await fetch('euro-use-map.json');
-  if (!response.ok) throw new Error('Could not load euro-use-map.json');
+  const response = await fetch('euro-use-master-map.json');
+  if (!response.ok) throw new Error('Could not load euro-use-master-map.json');
   initial = await response.json();
 } catch (error) {
-  $('status').textContent = 'Error: The map data file could not be loaded. Please ensure euro-use-map.json exists.';
+  $('status').textContent = 'Error: The map data file could not be loaded. Please ensure euro-use-master-map.json exists.';
   $('status').classList.add('error');
   throw error; // Stop the script if the data is missing
 }
@@ -1422,7 +1422,7 @@ $('publish-map').onclick = async () => {
   status("Publishing to GitHub...");
   try {
     const repo = 'ShortOkapi/ebt-target-maps';
-    const path = 'euro-use-map.json';
+    const path = 'euro-use-master-map.json';
 
     // 1. Find the exact file currently on GitHub so we can safely overwrite it
     let sha = '';
